@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakkımızda - West Studios</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .mobile-menu {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-menu {
+        display: none;
+      }
+      .mobile-menu {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white font-sans">
+  
+
+<!-- Navbar -->
+<header class="bg-black bg-opacity-90 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold text-purple-400">West Studios</div>
+
+            <!-- Menü düğmesi (mobilde görünür) -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menü bağlantıları (masaüstü) -->
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+                <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+                <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+                <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+                   <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+               
+            </nav>
+        </div>
+
+        <!-- Açılır menü (mobil) -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 pb-4">
+            <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+            <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+            <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+            <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+               <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+           
+        </div>
+    </div>
+</header>
+
+<!-- Menü aç/kapa scripti -->
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+
+
+  <!-- Ana içerik -->
+  <main class="px-6 py-16 max-w-4xl mx-auto">
+    <h1 class="text-5xl font-bold text-purple-300 mb-6">Biz Kimiz?</h1>
+    <p class="text-lg text-gray-300 mb-4">
+      West Studios, 2025 yılında genç ve yaratıcı bir ekip tarafından kurulan bir müzik prodüksiyon şirketidir. Hedefimiz, müziğin ruhunu en özgün ve etkileyici şekilde dinleyicilerle buluşturmaktır.
+    </p>
+    <p class="text-lg text-gray-300 mb-4">
+      Müşterilerimize yalnızca teknik destek sunmakla kalmıyor, aynı zamanda projelerinin vizyonuna katkıda bulunuyoruz. Sesin gücünü en iyi şekilde kullanarak profesyonel çözümler sunuyoruz.
+    </p>
+    <p class="text-lg text-gray-300">
+      West Studios olarak stüdyomuzda prodüksiyon, kayıt, miks ve mastering hizmetlerinin yanı sıra genç sanatçılara destek programları da sunmaktayız.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+</body>
+</html>

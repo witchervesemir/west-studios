@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiyatlandırma | West Studios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans min-h-screen">
+
+<!-- Navbar -->
+<header class="bg-black bg-opacity-90 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold text-purple-400">West Studios</div>
+
+            <!-- Menü düğmesi (mobilde görünür) -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menü bağlantıları (masaüstü) -->
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+                <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+                <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+                <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+            <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+             
+            </nav>
+        </div>
+
+        <!-- Açılır menü (mobil) -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 pb-4">
+            <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+            <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+            <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+            <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+            <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+        
+        </div>
+    </div>
+</header>
+
+<!-- Menü aç/kapa scripti -->
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+    <!-- Fiyatlandırma ve Abonelikler -->
+    <section id="fiyatlar" class="py-20 px-6 bg-gradient-to-r from-black via-gray-900 to-black text-white">
+        <h2 class="text-4xl font-bold text-center mb-12 text-purple-400"> Hizmetlerimiz ve Fiyatlandırmalarımız </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <!-- Kart 1 -->
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">Sadece Kayıt</h3>
+                <p class="text-gray-300 mb-4">Stüdyomuzda profesyonel kayıt imkanı.</p>
+                <p class="text-xl font-bold text-white">1.500 TL</p>
+            </div>
+
+            <!-- Kart 2 -->
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">Mixaj ve Mastering</h3>
+                <p class="text-gray-300 mb-4">Şarkınızın ses kalitesini profesyonelleştirin.</p>
+                <p class="text-xl font-bold text-white">3.500 TL</p>
+            </div>
+
+            <!-- Kart 3 -->
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">Sadece Beat</h3>
+                <p class="text-gray-300 mb-4">Tarzınıza uygun özgün beat üretimi.</p>
+                <p class="text-xl font-bold text-white">2.700 TL</p>
+            </div>
+
+            <!-- Kart 4 -->
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">Kayıt + Beat + Mix + Mastering + Aranje</h3>
+                <p class="text-gray-300 mb-4">Tam paket hizmetimiz ile her şey dahil.</p>
+                <p class="text-xl font-bold text-white">6.700 TL</p>
+            </div>
+
+            <!-- Kart 5 -->
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">Kapak Fotoğrafı</h3>
+                <p class="text-gray-300 mb-4">Şarkınız için profesyonel görsel tasarım.</p>
+                <p class="text-xl font-bold text-white">650 TL</p>
+            </div>
+
+            <!-- Kart 6 -->
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">YouTube Edit</h3>
+                <p class="text-gray-300 mb-4">Şarkınız için yayınlanmaya hazır video düzenleme.</p>
+                <p class="text-xl font-bold text-white">450 TL</p>
+            </div>
+
+            <!-- Kart 7 -->
+            <div class="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-purple-300 mb-2">Kapak + YouTube Edit</h3>
+                <p class="text-gray-300 mb-4">Tüm görsel medya hizmetleri birlikte.</p>
+                <p class="text-xl font-bold text-white">1.000 TL</p>
+            </div>
+
+            <!-- Kart 8 -->
+            <div
+                class="bg-purple-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300 border-2 border-purple-400">
+                <h3 class="text-2xl font-semibold text-white mb-2">Her Şey Dahil Paket</h3>
+                <p class="text-gray-100 mb-4">Tüm hizmetleri kapsayan profesyonel paket.</p>
+                <p class="text-2xl font-extrabold text-yellow-300">7.500 TL</p>
+            </div>
+
+            <!-- İletişim Kartı -->
+            <div
+                class="bg-gray-700 rounded-2xl p-6 shadow-lg text-purple-300 flex flex-col justify-center items-center text-center">
+                <h3 class="text-2xl font-semibold mb-4 text-purple-400">Bizimle Çalışmak İster misiniz?</h3>
+                <p>Projeleriniz için bizimle iletişime geçin. Sorularınız varsa size yardımcı olmaktan memnuniyet duyarız.</p>
+                <p class="font-bold mt-6 text-white">
+                    📧 weststudios@musicmail.com<br />
+                    📞 0555 123 45 67
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+  
+</body>
+
+</html>

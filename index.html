@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+
+
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>West Studios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            orbitron: ['Orbitron', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-black text-white font-sans min-h-screen">
+
+<!-- Navbar -->
+<header class="bg-black bg-opacity-90 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold text-purple-400">West Studios</div>
+
+            <!-- Menü düğmesi (mobilde görünür) -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menü bağlantıları (masaüstü) -->
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+                <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+                <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+                <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+                   <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+           
+            </nav>
+        </div>
+
+        <!-- Açılır menü (mobil) -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 pb-4">
+            <a href="index.html" class="hover:text-purple-400">Anasayfa</a>
+            <a href="hakkimizda.html" class="hover:text-purple-400">Hakkımızda</a>
+            <a href="hizmetler.html" class="hover:text-purple-400">Hizmetler</a>
+            <a href="sanatcilar.html" class="hover:text-purple-400">Sanatçılar</a>
+            <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+       
+        </div>
+    </div>
+</header>
+
+<!-- Menü aç/kapa scripti -->
+<script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+  <div class="relative min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('west.jpg');">
+    <!-- Karartma -->
+    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+    <!-- İçerik -->
+    <div class="relative z-10">
+      <!-- Navbar Yüklenecek -->
+      <div id="navbar-container"></div>
+
+      <!-- Hero Section -->
+      <section class="flex flex-col justify-center items-center text-center h-screen pt-24 px-4">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white drop-shadow-xl mb-4">
+          “Kalem Senin, Beat Bizim”
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8">West Studios ile yaratıcı sesin gücünü keşfet</p>
+      
+        
+      </section>
+    </div>
+  </div>
+
+  <!-- Hizmetler Bölümü -->
+  <section id="hizmetler" class="py-20 px-4 sm:px-6 bg-black">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-purple-400">Öne Çıkan Hizmetlerimiz</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 max-w-6xl mx-auto">
+      <!-- Kartlar -->
+      <a
+        href="hizmetler.html"
+        class="relative h-60 sm:h-64 rounded-2xl overflow-hidden hover:scale-105 transition shadow-xl bg-cover bg-center"
+        style="background-image: url('mehmet.jpg')"
+      >
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center p-4 sm:p-6"
+        >
+          <h3 class="text-xl sm:text-2xl font-semibold mb-2 text-purple-300">Prodüksiyon</h3>
+          <p class="text-sm sm:text-base text-gray-300">Profesyonel ses kayıt ve prodüksiyon hizmetleri.</p>
+        </div>
+      </a>
+
+      <a
+        href="sanatcilar.html"
+        class="relative h-60 sm:h-64 rounded-2xl overflow-hidden hover:scale-105 transition shadow-xl bg-cover bg-center"
+        style="background-image: url('mehmet2.jpg')"
+      >
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center p-4 sm:p-6"
+        >
+          <h3 class="text-xl sm:text-2xl font-semibold mb-2 text-purple-300">Sanatçılarımız</h3>
+          <p class="text-sm sm:text-base text-gray-300">Yetenekli sanatçılarımızla tanışın.</p>
+        </div>
+      </a>
+
+      <a
+        href="hakkimizda.html"
+        class="relative h-60 sm:h-64 rounded-2xl overflow-hidden hover:scale-105 transition shadow-xl bg-cover bg-center"
+        style="background-image: url('money.jpg')"
+      >
+        <div
+          class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center p-4 sm:p-6"
+        >
+          <h3 class="text-xl sm:text-2xl font-semibold mb-2 text-purple-300">Hakkımızda</h3>
+          <p class="text-sm sm:text-base text-gray-300">Stüdyomuzun vizyonunu ve hikayesini keşfedin.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer Yüklenecek -->
+  <div id="footer-container"></div>
+
+ 
+
+</body>
+
+</html>
