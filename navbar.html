@@ -1,0 +1,38 @@
+<header class="flex justify-between items-center p-4 sm:p-6 bg-black bg-opacity-80 fixed w-full z-50">
+  <div class="text-2xl sm:text-3xl font-bold text-purple-400 font-orbitron">
+    West Studios
+  </div>
+  <nav class="hidden md:flex space-x-4 sm:space-x-6 text-sm sm:text-lg">
+    <a href="index.html" class="hover:text-purple-400 transition">Anasayfa</a>
+    <a href="hakkimizda.html" class="hover:text-purple-400 transition">Hakkımızda</a>
+    <a href="hizmetler.html" class="hover:text-purple-400 transition">Hizmetler</a>
+    <a href="sanatcilar.html" class="hover:text-purple-400 transition">Sanatçılar</a>
+    <a href="#iletisim" class="hover:text-purple-400 transition">İletişim</a>
+    <a href="fiyatlar.html" class="hover:text-purple-400 transition">Fiyatlar</a>
+    <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+  </nav>
+
+  <!-- Mobil Menü -->
+  <div class="md:hidden">
+    <button id="mobile-menu-button" class="text-purple-400">
+      ☰
+    </button>
+  </div>
+</header>
+
+<!-- Mobil Menü Açılır -->
+<div id="mobileMenu" class="md:hidden hidden absolute top-20 left-0 w-full bg-black bg-opacity-90 text-center z-50 space-y-4 p-6">
+  <a href="index.html" class="block hover:text-purple-400">Anasayfa</a>
+  <a href="hakkimizda.html" class="block hover:text-purple-400">Hakkımızda</a>
+  <a href="hizmetler.html" class="block hover:text-purple-400">Hizmetler</a>
+  <a href="sanatcilar.html" class="block hover:text-purple-400">Sanatçılar</a>
+  <a href="iletisim.html" class="hover:text-purple-400 transition">İletişim</a>
+</div>
+
+<script>
+  // Mobil menü butonu için toggle fonksiyonu
+  document.getElementById('mobile-menu-button').addEventListener('click', () => {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  });
+</script>

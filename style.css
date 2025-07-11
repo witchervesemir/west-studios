@@ -1,0 +1,66 @@
+body {
+  background: #000;
+  color: #ddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #b995ff;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+.contact-info {
+  max-width: 500px;
+  margin: 50px auto 0 auto;
+  background: #2a002a;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(185, 149, 255, 0.6);
+}
+
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-info p strong {
+  color: #cfa6ff;
+}
+
+.social-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.social-links li {
+  margin-bottom: 12px;
+}
+
+.social-links a {
+  color: #b995ff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 25px 15px;
+  }
+
+  .contact-info {
+    padding: 20px 15px;
+  }
+}
